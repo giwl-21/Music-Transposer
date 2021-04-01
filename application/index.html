@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.0.2/tf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/keras-js/0.3.0/keras.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js">
+	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+  <script src="../sources/dsp.js-master/dsp.js"></script>
+  <script src="../sources/stft.js"></script>
+  <script src="../sources/algorithms.js"></script>
+  <script src="bundle.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Music Transposer App</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<h1>Music Transposition Application</h1>
+<body>
+	<p id="output"></p>
+	<script src="script.js">	</script>
+  <button type="button" id="realTime" onclick="mic.start(realTime)">Microphone Transposition</button>
+  <button type="button" id="upload" onclick="upload()">Upload</button>
+  <audio src="Lullaby.mp3" id="aud" controls></audio>
+  <label id="input"></label>
+   <br/>
+   <button type="button" id="resume" onclick="resume()">Resume</button>
+  <button type="button" id="pause" onclick="pause()">Pause</button>
+  <button type="button" id="stop" onclick="stop()">Stop</button>
+  <button type="button" id="reset" onclick="reset()">Reset</button>
+  <br/>
+  <div id="scriptContainer"></div>
+
+  <br/>
+  <button type="button" id="dlAll" onclick = "dlSheetMusic()">Download Transposed MIDI</button>
+  <!--<button type="button" id="dlSection" onclick = "dlSheetMusicSect()">Download Section of Sheet Music</button>
+  <br/>-->
+  <button type="button" id="dlAudioAll" onclick = "dlAudio()">Download Audio</button>
+  <!--<button type="button" id="dlAudioSection" onclick = "dlAudioSect()">Download Audio Section</button>-->
+</body>
+
+</html>
